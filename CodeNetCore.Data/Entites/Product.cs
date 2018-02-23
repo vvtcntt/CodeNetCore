@@ -72,7 +72,7 @@ namespace CodeNetCore.Data.Entites
         [StringLength(255)]
         public string Tag { set; get; }
         public virtual ICollection<ProductTag> ProductTags { set; get; }
-
+        int IMutiLanguage<int>.LanguageId { set; get; }
     }
 }
 

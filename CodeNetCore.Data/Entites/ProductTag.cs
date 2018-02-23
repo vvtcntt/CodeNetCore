@@ -12,8 +12,7 @@ namespace CodeNetCore.Data.Entites
 
         public int ProductId { set; get; }
         [StringLength(30)]
-        [Column=typ]
-        public string TagId { set; get; }
+         public string TagId { set; get; }
         [ForeignKey("ProductId")]
 
         public virtual Product Product { set; get; }
