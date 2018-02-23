@@ -5,10 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entites\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="iRepositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeNetCore.Infrastructure\CodeNetCore.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
