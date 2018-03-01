@@ -27,10 +27,10 @@ namespace CodeNetCore.Data.Entites
         public string Content { get; set; }
         public string Parameter { get; set; }
         [StringLength(250)]
-        public string ImagesDetail { get; set; }
+        public string ImageDetail { get; set; }
         [StringLength(250)]
 
-        public string ImagesThumbs { get; set; }
+        public string ImageThumbs { get; set; }
         [Required]
         [DefaultValue(0)]
         public decimal? Price { get; set; }
@@ -72,7 +72,7 @@ namespace CodeNetCore.Data.Entites
         [StringLength(255)]
         public string Tag { set; get; }
         public virtual ICollection<ProductTag> ProductTags { set; get; }
-        int IMutiLanguage<int>.LanguageId { set; get; }
+         int IMutiLanguage<int>.LanguageId { set; get; }
     }
 }
 
