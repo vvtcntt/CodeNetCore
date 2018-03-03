@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 namespace CodeNetCore.Data.Entites
 {
     [Table("ProductCategories")]
-    public class ProductCategory : DomainEntity<int>, INameTable, IHasSeoMetaData, IDateTracking,  IOrdTable, ISwitchTable, IMutiLanguage<int>
+    public class ProductCategory : DomainEntity<int>, INameable, IHasSeoMetaData, IDateTracking,  IOrdable, ISwitchable, IMutiLanguage<int>
     {
         public ProductCategory()
         {
@@ -27,7 +27,6 @@ namespace CodeNetCore.Data.Entites
         [StringLength(255)]
         public string Icon { get; set; }
         public bool? HomeFlag { get; set; }
-        public Active Active { set; get; }
         public int Ord { set; get; }
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }

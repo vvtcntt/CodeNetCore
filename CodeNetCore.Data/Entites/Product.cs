@@ -11,7 +11,7 @@ using System.ComponentModel;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Products")]
-    public class Product : DomainEntity<int>, INameTable, ISwitchTable, IHasSeoMetaData, IDateTracking, IOrdTable, IMutiLanguage<int>
+    public class Product : DomainEntity<int>, INameable, ISwitchable, IHasSeoMetaData, IDateTracking, IOrdable, IMutiLanguage<int>
     {
          
         public string Name { get; set; }

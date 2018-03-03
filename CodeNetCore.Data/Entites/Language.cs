@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Languages")]
-    public class Language : DomainEntity<string>, ISwitchTable
+    public class Language : DomainEntity<string>, ISwitchable
     {
         [Required]
         [StringLength(128)]

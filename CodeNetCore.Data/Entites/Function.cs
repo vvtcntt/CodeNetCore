@@ -10,7 +10,7 @@ using CodeNetCore.Data.Enums;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Functions")]
-    public class Function : DomainEntity<string>, ISwitchTable, IOrdTable
+    public class Function : DomainEntity<string>, ISwitchable, IOrdable
     {
         public Function()
         {
@@ -23,7 +23,7 @@ namespace CodeNetCore.Data.Entites
             this.ParentId = parentId;
             this.IconCss = iconCss;
             this.Ord = ord;
-            this.Active = Active.Active;
+            this.Status = Status.Active;
          }
         [Required]
         [StringLength(128)]
@@ -38,8 +38,7 @@ namespace CodeNetCore.Data.Entites
         public string ParentId { set; get; }
 
         public string IconCss { get; set; }
-        public Active Active { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Status Status { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Ord { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+         public Status Status { get; set; }
+        public int Ord { get; set; }
     }
 }

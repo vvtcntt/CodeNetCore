@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CodeNetCore.Data.Interfaces
 {
-    public interface IOrdTable
+    public interface IOrdable
     {
         int Ord { set; get; }
     }

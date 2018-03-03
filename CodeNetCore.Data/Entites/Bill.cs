@@ -11,7 +11,7 @@ using System.Text;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Bills")]
-    public class Bill : DomainEntity<int>, ISwitchTable, IDateTracking
+    public class Bill : DomainEntity<int>, ISwitchable, IDateTracking
     {
         public Bill() { }
 
@@ -74,6 +74,5 @@ namespace CodeNetCore.Data.Entites
         public virtual AppUser User { set; get; }
 
         public virtual ICollection<BillDetail> BillDetails { set; get; }
-        public Active Active { set; get; }
     }
 }

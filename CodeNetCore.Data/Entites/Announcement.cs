@@ -10,7 +10,7 @@ using CodeNetCore.Data.Enums;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Announcements")]
-    public class Announcement : DomainEntity<string>, ISwitchTable, IDateTracking
+    public class Announcement : DomainEntity<string>, ISwitchable, IDateTracking
     {
         public Announcement()
         {

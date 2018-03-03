@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CodeNetCore.Data.Entites
 {
-    public class Tag : DomainEntity<string>, INameTable
+    public class Tag : DomainEntity<string>, INameable
     {
         [StringLength(50)]
         [Required]

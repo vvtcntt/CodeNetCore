@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeNetCore.Data.Interfaces
 {
-    public interface INameTable
+    public interface INameable
     {
         [StringLength(150)]
         [Required]

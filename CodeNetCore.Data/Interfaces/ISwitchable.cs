@@ -5,9 +5,8 @@ using System.Text;
 
 namespace CodeNetCore.Data.Interfaces
 {
-    public interface ISwitchTable
+    public interface ISwitchable
     {
-        Active Active { set; get; }
         Status Status { set; get; }
     }
 }

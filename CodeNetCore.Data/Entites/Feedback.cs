@@ -10,7 +10,7 @@ using CodeNetCore.Data.Enums;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Feedbacks")]
-    public class Feedback : DomainEntity<int>, ISwitchTable, IDateTracking
+    public class Feedback : DomainEntity<int>, ISwitchable, IDateTracking
     {
 
         [StringLength(250)]
@@ -25,7 +25,6 @@ namespace CodeNetCore.Data.Entites
 
          public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
-        public Active Active { set; get; }
         public Status Status { set; get; }
     }
 }

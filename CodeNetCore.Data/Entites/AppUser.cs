@@ -9,7 +9,7 @@ using CodeNetCore.Data.Enums;
 namespace CodeNetCore.Data.Entites
 {
     [Table("AppUsers")]
-    public class AppUser : IdentityUser<Guid>, IDateTracking, ISwitchTable
+    public class AppUser : IdentityUser<Guid>, IDateTracking, ISwitchable
     {
         public string FullName { get; set; }
 
@@ -21,7 +21,6 @@ namespace CodeNetCore.Data.Entites
 
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public Active Active { get; set; }
         public Status Status { get; set; }
     }
 }

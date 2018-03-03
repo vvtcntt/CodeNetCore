@@ -10,7 +10,7 @@ using CodeNetCore.Data.Enums;
 namespace CodeNetCore.Data.Entites
 {
     [Table("Contacts")]
-    public class Contact : DomainEntity<string>,ISwitchTable
+    public class Contact : DomainEntity<string>,ISwitchable
     {
 
         [StringLength(250)]
@@ -34,7 +34,6 @@ namespace CodeNetCore.Data.Entites
         public double? Lat { set; get; }
 
         public double? Lng { set; get; }
-        public Active Active { set; get; }
         public Status Status { set; get; }
     }
 }
