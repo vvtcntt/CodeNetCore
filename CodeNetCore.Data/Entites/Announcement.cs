@@ -24,8 +24,7 @@ namespace CodeNetCore.Data.Entites
         [StringLength(250)]
         public string Content { set; get; }
 
-        [StringLength(450)]
-        public string UserId { set; get; }
+        public Guid UserId { set; get; }
 
         [ForeignKey("UserId")]
         public virtual AppUser AppUser { get; set; }
@@ -33,7 +32,6 @@ namespace CodeNetCore.Data.Entites
         public virtual ICollection<AnnouncementUser> AnnouncementUsers { get; set; }
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
-        public Active Active { set; get; }
         public Status Status { set; get; }
     }
 }

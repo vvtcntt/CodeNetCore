@@ -61,7 +61,7 @@ namespace CodeNetCore.Data.Entites
         public string KeywordMeta {set;get;}
         [StringLength(300)]
         public string DescriptionMeta {set;get;}
-        [Column (TypeName ="varchar")]
+        [Column (TypeName ="varchar(255)")]
         [StringLength(255)]
         public string Alias {set;get;}
         public Status Status {set;get;}

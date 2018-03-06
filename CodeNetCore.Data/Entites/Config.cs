@@ -51,26 +51,26 @@ namespace CodeNetCore.Data.Entites
         [StringLength(500)]
          public string GeoMeta { get; set; }
         [StringLength(250)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(50)")]
          public string Color { get; set; }
         [StringLength(50)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(50)")]
         public string Host { get; set; }
         public int? Port { get; set; }
         [StringLength(50)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(50)")]
         public string TimeOut { get; set; }
         public bool? Coppy { get; set; }
         public bool? Social { get; set; }
         public bool? Popup { get; set; }
         [StringLength(250)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(255)")]
         string TitleMeta { set; get; }
         [StringLength(500)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(500)")]
         string KeywordMeta { set; get; }
         [StringLength(250)]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(500)")]
         string DescriptionMeta { set; get; }
     }
 
