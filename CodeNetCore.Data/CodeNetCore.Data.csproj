@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="iRepositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CodeNetCore.Infrastructure\CodeNetCore.Infrastructure.csproj" />
   </ItemGroup>
 
