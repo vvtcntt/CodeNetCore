@@ -12,8 +12,8 @@ using System;
 namespace CodeNetCore.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20180306093216_initial")]
-    partial class initial
+    [Migration("20180307024213_initials")]
+    partial class initials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,7 +25,9 @@ namespace CodeNetCore.Data.EF.Migrations
             modelBuilder.Entity("CodeNetCore.Data.Entites.Announcement", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Content")
                         .HasMaxLength(250);

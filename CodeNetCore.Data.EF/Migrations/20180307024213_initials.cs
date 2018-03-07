@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CodeNetCore.Data.EF.Migrations
 {
-    public partial class initial : Migration
+    public partial class initials : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -341,7 +341,7 @@ namespace CodeNetCore.Data.EF.Migrations
                 name: "Announcements",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<string>(type: "varchar(128)", maxLength: 128, nullable: false),
                     Content = table.Column<string>(maxLength: 250, nullable: true),
                     DateCreated = table.Column<DateTime>(nullable: false),
                     DateModified = table.Column<DateTime>(nullable: false),

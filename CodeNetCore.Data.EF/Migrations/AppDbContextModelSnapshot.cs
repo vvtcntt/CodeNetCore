@@ -24,7 +24,9 @@ namespace CodeNetCore.Data.EF.Migrations
             modelBuilder.Entity("CodeNetCore.Data.Entites.Announcement", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Content")
                         .HasMaxLength(250);

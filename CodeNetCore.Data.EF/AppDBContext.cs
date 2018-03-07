@@ -62,6 +62,7 @@ namespace CodeNetCore.Data.EF
             #endregion Identity Config
             builder.AddConfiguration(new TagConfigguration());
             builder.AddConfiguration(new SystemConfigConfiguration());
+            builder.AddConfiguration(new AnnouncementConfiguration());
 
             base.OnModelCreating(builder);
         }
