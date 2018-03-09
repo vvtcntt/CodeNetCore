@@ -13,7 +13,8 @@ namespace CodeNetCore.Application.AutoMapper
                 cfg => {
                     cfg.AddProfile(new DomainToViewModelMappingProfile());
                     cfg.AddProfile(new ViewModelToDomainMappingProfile());
-                    });
+                 }); 
+      
         }
     }
 }
