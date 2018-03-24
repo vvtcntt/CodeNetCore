@@ -18,7 +18,10 @@ using CodeNetCore.Data.iRepositories;
 using CodeNetCore.Application.Implementation;
 using CodeNetCore.Application.Interfaces;
 using CodeNetCore.Data.EF.Repositories;
- namespace CodeNetCore
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
+
+namespace CodeNetCore
 {
     public class Startup
     {
@@ -66,12 +69,13 @@ using CodeNetCore.Data.EF.Repositories;
             services.AddTransient<DbInitializer>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-            services.AddMvc();
+             services.AddMvc().AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/loginthiepvu.txt");
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();

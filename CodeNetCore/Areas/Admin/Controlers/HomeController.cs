@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace CodeNetCore.Areas.Admin.Controlers
 {
     public class HomeController : Controller
-    {[Area("Admin")]
+    {
+
+        [Area("Admin")]
         public IActionResult Index()
         {
             return View();
