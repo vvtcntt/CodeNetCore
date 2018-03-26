@@ -33,11 +33,11 @@
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <section class="login_content">
-                    <form>
+                    <form id="frmLogin">
                         @Html.AntiForgeryToken()
                         <h1>Đăng nhập hệ thống</h1>
                         <div>
-                            <input type="text" id="txtUserName" name="userName" class="form-control" placeholder="Tên đăng nhập" required="" />
+                            <input type="text" data-required="true" id="txtUserName" name="userName" class="form-control" placeholder="Tên đăng nhập" required="" />
                         </div>
                         <div>
                             <input type="password" id="txtPassword" name="password" class="form-control" placeholder="Mật khẩu" required="" />
@@ -69,7 +69,11 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
+    <script src="~/lib/jquery-validation/localization/messages_vi.js"></script>
     <script src="~/app/shared/thiepvu.js"></script>
     <script src="~/app/controller/login/index.js"></script>
 

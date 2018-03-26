@@ -5,10 +5,26 @@
 
     var registerEvents = function () {
         $('#btnLogin').on('click', function (e) {
-            e.preventDefault();
-            var user = $('#txtUserName').val();
-            var password = $('#txtPassword').val();
-            login(user, password);
+            if ($('#frmLogin').valid()) {
+                e.preventDefault();
+                var user = $('#txtUserName').val();
+                var password = $('#txtPassword').val();
+                login(user, password);
+            }
+            
+        });
+        $("#frmLogin").validate({
+            errorClass: 'red',
+            ignore: [],
+            lang: 'vi',
+            rule: {
+                userName: {
+                    required:true
+                },
+                password: {
+                    required:true
+                }
+            }
         });
     }
 
