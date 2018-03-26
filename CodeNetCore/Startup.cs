@@ -20,6 +20,7 @@ using CodeNetCore.Application.Interfaces;
 using CodeNetCore.Data.EF.Repositories;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using CodeNetCore.Helpers;
 
 namespace CodeNetCore
 {
@@ -65,6 +66,7 @@ namespace CodeNetCore
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
