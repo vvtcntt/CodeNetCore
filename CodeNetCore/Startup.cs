@@ -69,13 +69,17 @@ namespace CodeNetCore
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
+            //repository
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+            //service
+            services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-             services.AddMvc().AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
+            services.AddMvc().AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory,DbInitializer dbInitializer)
         {
             loggerFactory.AddFile("Logs/loginthiepvu.txt");
             if (env.IsDevelopment())
@@ -102,6 +106,7 @@ namespace CodeNetCore
                 routes.MapRoute(name: "areaRoute",
                     template: "{area:exists}/{controller=login}/{action=Index}/{id?}");
             });
+             //dbInitializer.Seed().Wait();
         }
     }
 }

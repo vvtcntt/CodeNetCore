@@ -12,7 +12,7 @@ using System;
 namespace CodeNetCore.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20180323032509_initials")]
+    [Migration("20180329074126_initials")]
     partial class initials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

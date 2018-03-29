@@ -23,7 +23,7 @@ namespace CodeNetCore
 
                 try
                 {
-                    var dbInitializer = services.GetService<DbInitializer>();
+                  var dbInitializer = services.GetService<DbInitializer>();
                     dbInitializer.Seed().Wait();
                 }
                 catch (Exception ex)

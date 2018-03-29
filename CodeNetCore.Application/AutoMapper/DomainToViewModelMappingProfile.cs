@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CodeNetCore.Application.ViewModels.Function;
 using CodeNetCore.Application.ViewModels.Product;
 using CodeNetCore.Data.Entites;
 using System;
@@ -12,6 +13,7 @@ namespace CodeNetCore.Application.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<ProductCategory, ProductCategoryViewModel>();
+            CreateMap<Function, FunctionViewModel>();
         }
     }
 }

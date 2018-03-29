@@ -11,5 +11,7 @@ namespace CodeNetCore.Infrastructure.SharedKernel
         {
             return Id.Equals(default(T));
         }
+
     }
+
 }

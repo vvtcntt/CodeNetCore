@@ -24,7 +24,7 @@ namespace CodeNetCore.Data.Entites
             this.IconCss = iconCss;
             this.Ord = ord;
             this.Status = Status.Active;
-         }
+        }
         [Required]
         [StringLength(128)]
         public string Name { set; get; }
@@ -38,7 +38,7 @@ namespace CodeNetCore.Data.Entites
         public string ParentId { set; get; }
 
         public string IconCss { get; set; }
-         public Status Status { get; set; }
-        public int Ord { get; set; }
+         public Status Status { set; get; }
+        public int Ord { set; get; }
     }
 }

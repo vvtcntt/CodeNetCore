@@ -1,0 +1,765 @@
+2018-03-27T16:57:59.5806107+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T16:58:00.2943602+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:58:00.3272405+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:58:00.3541290+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-03-27T16:58:00.3951996+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-03-27T16:58:00.4641222+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-03-27T16:58:00.4859674+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-03-27T16:58:00.5979756+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Configs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:58:01.1872958+07:00 0HLCJP4SS3A8S:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/   (ca22a1cb)
+2018-03-27T16:58:01.5749631+07:00 0HLCJP4SS3A8S:00000001 [INF] Executing action method "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:58:06.0323553+07:00 0HLCJP4SS3A8S:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T16:58:07.6605104+07:00 0HLCJP4SS3A8S:00000001 [INF] Executed action "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" in 5982.6377ms (afa2e885)
+2018-03-27T16:58:07.7141186+07:00 0HLCJP4SS3A8U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner1.svg   (ca22a1cb)
+2018-03-27T16:58:07.7468513+07:00 0HLCJP4SS3A8S:00000001 [INF] Request finished in 6521.9949ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T16:58:07.7805622+07:00 0HLCJP4SS3A8U:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner1.svg"' (27b0a520)
+2018-03-27T16:58:07.7986402+07:00 0HLCJP4SS3A90:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-27T16:58:07.8027358+07:00 0HLCJP4SS3A8V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/css/site.css   (ca22a1cb)
+2018-03-27T16:58:07.8482816+07:00 0HLCJP4SS3A8V:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\css\site.css"' (27b0a520)
+2018-03-27T16:58:07.9072300+07:00 0HLCJP4SS3A8U:00000001 [INF] Request finished in 156.5183ms 200 image/svg+xml (791a596a)
+2018-03-27T16:58:07.9218595+07:00 0HLCJP4SS3A90:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-03-27T16:58:07.9338716+07:00 0HLCJP4SS3A8V:00000001 [INF] Request finished in 240.0947ms 200 text/css (791a596a)
+2018-03-27T16:58:07.9741642+07:00 0HLCJP4SS3A91:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-03-27T16:58:07.9993269+07:00 0HLCJP4SS3A91:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-03-27T16:58:08.0088340+07:00 0HLCJP4SS3A92:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner2.svg   (ca22a1cb)
+2018-03-27T16:58:08.1143648+07:00 0HLCJP4SS3A92:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner2.svg"' (27b0a520)
+2018-03-27T16:58:08.1692576+07:00 0HLCJP4SS3A93:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner4.svg   (ca22a1cb)
+2018-03-27T16:58:08.2042240+07:00 0HLCJP4SS3A93:00000001 [INF] Sending file. Request path: '"/images/banner4.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner4.svg"' (27b0a520)
+2018-03-27T16:58:08.2243952+07:00 0HLCJP4SS3A92:00000001 [INF] Request finished in 189.2624ms 200 image/svg+xml (791a596a)
+2018-03-27T16:58:08.2354443+07:00 0HLCJP4SS3A94:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner3.svg   (ca22a1cb)
+2018-03-27T16:58:08.2411875+07:00 0HLCJP4SS3A94:00000001 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner3.svg"' (27b0a520)
+2018-03-27T16:58:08.3335421+07:00 0HLCJP4SS3A93:00000001 [INF] Request finished in 162.8274ms 200 image/svg+xml (791a596a)
+2018-03-27T16:58:08.3911286+07:00 0HLCJP4SS3A95:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-03-27T16:58:08.5705828+07:00 0HLCJP4SS3A95:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-03-27T16:58:08.9749480+07:00 0HLCJP4SS3A94:00000001 [INF] Request finished in 43.5519ms 200 image/svg+xml (791a596a)
+2018-03-27T16:58:09.2670967+07:00 0HLCJP4SS3A95:00000001 [INF] Request finished in 669.1022ms 200 application/javascript (791a596a)
+2018-03-27T16:58:09.4562164+07:00 0HLCJP4SS3A96:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-03-27T16:58:10.2329390+07:00 0HLCJP4SS3A96:00000001 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\js\site.js"' (27b0a520)
+2018-03-27T16:58:12.2710898+07:00 0HLCJP4SS3A90:00000001 [INF] Request finished in 3648.1865ms 200 text/css (791a596a)
+2018-03-27T16:58:13.1513150+07:00 0HLCJP4SS3A96:00000001 [INF] Request finished in 2820.387ms 200 application/javascript (791a596a)
+2018-03-27T16:58:13.3527835+07:00 0HLCJP4SS3A8S:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-03-27T16:58:13.5075178+07:00 0HLCJP4SS3A91:00000001 [INF] Request finished in 4817.9844ms 200 application/javascript (791a596a)
+2018-03-27T16:58:13.6467546+07:00 0HLCJP4SS3A8S:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-03-27T16:58:15.3969899+07:00 0HLCJP4SS3A8S:00000002 [INF] Request finished in 2625.4175ms 200 font/woff2 (791a596a)
+2018-03-27T16:58:15.4776666+07:00 0HLCJP4SS3A8U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/favicon.ico   (ca22a1cb)
+2018-03-27T16:58:15.5263583+07:00 0HLCJP4SS3A8U:00000002 [INF] Request finished in 110.326ms 404  (791a596a)
+2018-03-27T16:58:17.1338656+07:00 0HLCJP4SS3A8V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin   (ca22a1cb)
+2018-03-27T16:58:17.1576184+07:00 0HLCJP4SS3A8V:00000002 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:58:18.5828240+07:00 0HLCJP4SS3A8V:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-03-27T16:58:18.9670087+07:00 0HLCJP4SS3A8V:00000002 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" in 1559.6307ms (afa2e885)
+2018-03-27T16:58:19.0582942+07:00 0HLCJP4SS3A8V:00000002 [INF] Request finished in 1992.3405ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T16:58:19.0806747+07:00 0HLCJP4SS3A92:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-27T16:58:19.1005707+07:00 0HLCJP4SS3A92:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-03-27T16:58:19.1124247+07:00 0HLCJP4SS3A8V:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-03-27T16:58:19.1344755+07:00 0HLCJP4SS3A8V:00000003 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-03-27T16:58:19.2250378+07:00 0HLCJP4SS3A94:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-03-27T16:58:19.2488846+07:00 0HLCJP4SS3A94:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-03-27T16:58:19.2566744+07:00 0HLCJP4SS3A8V:00000003 [INF] Request finished in 74.3069ms 200 application/javascript (791a596a)
+2018-03-27T16:58:19.2959277+07:00 0HLCJP4SS3A93:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-03-27T16:58:19.3195239+07:00 0HLCJP4SS3A93:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-03-27T16:58:19.5007739+07:00 0HLCJP4SS3A94:00000002 [INF] Request finished in 166.6337ms 200 text/css (791a596a)
+2018-03-27T16:58:19.5983157+07:00 0HLCJP4SS3A93:00000002 [INF] Request finished in 75.8358ms 200 text/css (791a596a)
+2018-03-27T16:58:19.6269829+07:00 0HLCJP4SS3A90:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/animate.css/animate.css   (ca22a1cb)
+2018-03-27T16:58:19.6390537+07:00 0HLCJP4SS3A95:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-03-27T16:58:19.6638176+07:00 0HLCJP4SS3A90:00000002 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-03-27T16:58:19.6671661+07:00 0HLCJP4SS3A95:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-03-27T16:58:19.8246885+07:00 0HLCJP4SS3A96:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin-side/css/custom.css   (ca22a1cb)
+2018-03-27T16:58:19.8723539+07:00 0HLCJP4SS3A96:00000002 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-03-27T16:58:19.8811488+07:00 0HLCJP4SS3A91:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-03-27T16:58:19.9135559+07:00 0HLCJP4SS3A91:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-03-27T16:58:20.0318264+07:00 0HLCJP4SS3A8S:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-03-27T16:58:20.0500693+07:00 0HLCJP4SS3A8S:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-03-27T16:58:20.1668998+07:00 0HLCJP4SS3A8S:00000003 [INF] Request finished in 155.8272ms 200 application/javascript (791a596a)
+2018-03-27T16:58:20.1904836+07:00 0HLCJP4SS3A91:00000002 [INF] Request finished in 160.2811ms 200 application/javascript (791a596a)
+2018-03-27T16:58:20.3217992+07:00 0HLCJP4SS3A8U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-03-27T16:58:20.3390482+07:00 0HLCJP4SS3A8U:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-03-27T16:58:20.5503591+07:00 0HLCJP4SS3A8U:00000003 [INF] Request finished in 137.0295ms 200 application/javascript (791a596a)
+2018-03-27T16:58:20.9170098+07:00 0HLCJP4SS3A97:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/localization/messages_vi.js   (ca22a1cb)
+2018-03-27T16:58:21.0059665+07:00 0HLCJP4SS3A98:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/shared/thiepvu.js   (ca22a1cb)
+2018-03-27T16:58:21.0177415+07:00 0HLCJP4SS3A98:00000001 [INF] Sending file. Request path: '"/app/shared/thiepvu.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\shared\thiepvu.js"' (27b0a520)
+2018-03-27T16:58:21.0360185+07:00 0HLCJP4SS3A97:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/localization/messages_vi.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\localization\messages_vi.js"' (27b0a520)
+2018-03-27T16:58:21.0741826+07:00 0HLCJP4SS3A99:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/controller/login/index.js   (ca22a1cb)
+2018-03-27T16:58:21.0799296+07:00 0HLCJP4SS3A98:00000001 [INF] Request finished in 231.0477ms 200 application/javascript (791a596a)
+2018-03-27T16:58:21.1577473+07:00 0HLCJP4SS3A9A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-03-27T16:58:21.1827315+07:00 0HLCJP4SS3A97:00000001 [INF] Request finished in 741.036ms 200 application/javascript (791a596a)
+2018-03-27T16:58:21.1892495+07:00 0HLCJP4SS3A95:00000002 [INF] Request finished in 1518.0032ms 200 text/css (791a596a)
+2018-03-27T16:58:21.1915225+07:00 0HLCJP4SS3A99:00000001 [INF] Sending file. Request path: '"/app/controller/login/index.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\controller\login\index.js"' (27b0a520)
+2018-03-27T16:58:21.2191433+07:00 0HLCJP4SS3A9A:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-03-27T16:58:21.4020004+07:00 0HLCJP4SS3A90:00000002 [INF] Request finished in 1730.899ms 200 text/css (791a596a)
+2018-03-27T16:58:21.4086862+07:00 0HLCJP4SS3A96:00000002 [INF] Request finished in 1494.1036ms 200 text/css (791a596a)
+2018-03-27T16:58:21.6412847+07:00 0HLCJP4SS3A92:00000002 [INF] Request finished in 2473.5922ms 200 text/css (791a596a)
+2018-03-27T16:58:21.7362649+07:00 0HLCJP4SS3A9A:00000001 [INF] Request finished in 222.418ms 200 application/javascript (791a596a)
+2018-03-27T16:58:21.8067080+07:00 0HLCJP4SS3A99:00000001 [INF] Request finished in 149.4623ms 200 application/javascript (791a596a)
+2018-03-27T16:58:21.8508922+07:00 0HLCJP4SS3A8V:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-03-27T16:58:21.8822746+07:00 0HLCJP4SS3A8V:00000004 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-03-27T16:58:21.9965975+07:00 0HLCJP4SS3A8V:00000004 [INF] Request finished in 124.9052ms 200 font/woff2 (791a596a)
+2018-03-27T16:58:29.6076524+07:00 0HLCJP4SS3A94:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44300/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-03-27T16:58:29.7797004+07:00 0HLCJP4SS3A94:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" with arguments (["CodeNetCore.Models.AccountViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:58:29.8461368+07:00 0HLCJP4SS3A94:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T16:58:30.0154850+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("87"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-27T16:58:30.3830059+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("11"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-27T16:58:30.5491317+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("13"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T16:58:30.6458644+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("65"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-27T16:58:30.6972428+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-27T16:58:30.7153720+07:00 0HLCJP4SS3A94:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T16:58:30.7357198+07:00 0HLCJP4SS3A94:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-27T16:58:30.7455417+07:00 0HLCJP4SS3A94:00000003 [INF] User logged in. (fdce0db4)
+2018-03-27T16:58:30.7644179+07:00 0HLCJP4SS3A94:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-27T16:58:30.8680342+07:00 0HLCJP4SS3A94:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" in 1190.1474ms (afa2e885)
+2018-03-27T16:58:30.9252115+07:00 0HLCJP4SS3A94:00000003 [INF] Request finished in 1294.9327ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-27T16:58:30.9467776+07:00 0HLCJP4SS3A93:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/Admin/Home/Index   (ca22a1cb)
+2018-03-27T16:58:30.9608936+07:00 0HLCJP4SS3A93:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-27T16:58:30.9701930+07:00 0HLCJP4SS3A93:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:58:31.2320793+07:00 0HLCJP4SS3A93:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T16:58:32.0754699+07:00 0HLCJP4SS3A93:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" in 1105.1205ms (afa2e885)
+2018-03-27T16:58:32.3116821+07:00 0HLCJP4SS3A93:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Could not find an 'Invoke' or 'InvokeAsync' method for the view component 'CodeNetCore.Areas.Admin.Components.SideBarViewComponents'.
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.FindMethod(Type componentType)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.CreateDescriptor(TypeInfo typeInfo)
+   at System.Linq.Enumerable.SelectListIterator`2.ToArray()
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.GetViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.get_ViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentSelector.SelectComponent(String componentName)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.InvokeAsync(String name, Object arguments)
+   at Microsoft.AspNetCore.Mvc.Rendering.ViewComponentHelperExtensions.InvokeAsync(IViewComponentHelper helper, String name)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<<ExecuteAsync>b__39_7>d.MoveNext() in E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\Areas\Admin\Views\Shared\_Layout.cshtml:line 52
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<ExecuteAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-03-27T16:58:33.4398758+07:00 0HLCJP4SS3A93:00000003 [INF] Request finished in 2466.6899ms 500 text/html; charset=utf-8 (791a596a)
+2018-03-27T16:59:22.1616265+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T16:59:23.1667061+07:00  [INF] Executed DbCommand ("247"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:59:23.3471035+07:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:59:23.4071310+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-03-27T16:59:23.5162316+07:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-03-27T16:59:23.6555095+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-03-27T16:59:23.7346193+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-03-27T16:59:23.9156721+07:00  [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Configs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T16:59:24.4751421+07:00 0HLCJP5LM9T62:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/   (ca22a1cb)
+2018-03-27T16:59:25.3563534+07:00 0HLCJP5LM9T62:00000001 [INF] Executing action method "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:59:31.6011658+07:00 0HLCJP5LM9T62:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T16:59:32.8365278+07:00 0HLCJP5LM9T62:00000001 [INF] Executed action "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" in 7318.4881ms (afa2e885)
+2018-03-27T16:59:33.0299657+07:00 0HLCJP5LM9T64:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/css/site.css   (ca22a1cb)
+2018-03-27T16:59:33.1554952+07:00 0HLCJP5LM9T62:00000001 [INF] Request finished in 8424.3158ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T16:59:33.2366981+07:00 0HLCJP5LM9T64:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\css\site.css"' (27b0a520)
+2018-03-27T16:59:33.4753029+07:00 0HLCJP5LM9T65:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-27T16:59:33.4988690+07:00 0HLCJP5LM9T65:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-03-27T16:59:33.5315665+07:00 0HLCJP5LM9T67:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner2.svg   (ca22a1cb)
+2018-03-27T16:59:33.5711216+07:00 0HLCJP5LM9T67:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner2.svg"' (27b0a520)
+2018-03-27T16:59:33.6142770+07:00 0HLCJP5LM9T66:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner1.svg   (ca22a1cb)
+2018-03-27T16:59:33.6435535+07:00 0HLCJP5LM9T66:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner1.svg"' (27b0a520)
+2018-03-27T16:59:33.7222576+07:00 0HLCJP5LM9T66:00000001 [INF] Request finished in 281.7291ms 200 image/svg+xml (791a596a)
+2018-03-27T16:59:33.7801965+07:00 0HLCJP5LM9T68:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner4.svg   (ca22a1cb)
+2018-03-27T16:59:33.8083087+07:00 0HLCJP5LM9T68:00000001 [INF] Sending file. Request path: '"/images/banner4.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner4.svg"' (27b0a520)
+2018-03-27T16:59:33.8169135+07:00 0HLCJP5LM9T67:00000001 [INF] Request finished in 64.3178ms 200 image/svg+xml (791a596a)
+2018-03-27T16:59:33.8651673+07:00 0HLCJP5LM9T69:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-03-27T16:59:33.9210419+07:00 0HLCJP5LM9T69:00000001 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\js\site.js"' (27b0a520)
+2018-03-27T16:59:33.9969656+07:00 0HLCJP5LM9T69:00000001 [INF] Request finished in 82.8076ms 200 application/javascript (791a596a)
+2018-03-27T16:59:34.1137186+07:00 0HLCJP5LM9T68:00000001 [INF] Request finished in 71.828ms 200 image/svg+xml (791a596a)
+2018-03-27T16:59:34.1437555+07:00 0HLCJP5LM9T6B:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner3.svg   (ca22a1cb)
+2018-03-27T16:59:34.1641571+07:00 0HLCJP5LM9T6A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-03-27T16:59:34.1809080+07:00 0HLCJP5LM9T6A:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-03-27T16:59:34.3442199+07:00 0HLCJP5LM9T6B:00000001 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner3.svg"' (27b0a520)
+2018-03-27T16:59:34.3974175+07:00 0HLCJP5LM9T64:00000001 [INF] Request finished in 1383.0919ms 200 text/css (791a596a)
+2018-03-27T16:59:34.7392637+07:00 0HLCJP5LM9T6A:00000001 [INF] Request finished in 369.8609ms 200 application/javascript (791a596a)
+2018-03-27T16:59:35.0905761+07:00 0HLCJP5LM9T6C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-03-27T16:59:35.4004514+07:00 0HLCJP5LM9T65:00000001 [INF] Request finished in 1376.1506ms 200 text/css (791a596a)
+2018-03-27T16:59:35.4302577+07:00 0HLCJP5LM9T6B:00000001 [INF] Request finished in 452.7928ms 200 image/svg+xml (791a596a)
+2018-03-27T16:59:35.4387892+07:00 0HLCJP5LM9T62:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-03-27T16:59:35.4727070+07:00 0HLCJP5LM9T62:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-03-27T16:59:35.5014078+07:00 0HLCJP5LM9T6C:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-03-27T16:59:35.5984286+07:00 0HLCJP5LM9T62:00000002 [INF] Request finished in 452.8349ms 200 font/woff2 (791a596a)
+2018-03-27T16:59:35.7752606+07:00 0HLCJP5LM9T6C:00000001 [INF] Request finished in 1320.3557ms 200 application/javascript (791a596a)
+2018-03-27T16:59:35.8019767+07:00 0HLCJP5LM9T67:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/favicon.ico   (ca22a1cb)
+2018-03-27T16:59:35.8503903+07:00 0HLCJP5LM9T67:00000002 [INF] Request finished in 30.519ms 404  (791a596a)
+2018-03-27T16:59:39.4245018+07:00 0HLCJP5LM9T66:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin   (ca22a1cb)
+2018-03-27T16:59:39.4460576+07:00 0HLCJP5LM9T66:00000002 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:59:39.9956666+07:00 0HLCJP5LM9T66:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-03-27T16:59:40.2076396+07:00 0HLCJP5LM9T66:00000002 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" in 649.599ms (afa2e885)
+2018-03-27T16:59:40.2919621+07:00 0HLCJP5LM9T65:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-03-27T16:59:40.2993266+07:00 0HLCJP5LM9T6B:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-03-27T16:59:40.3194052+07:00 0HLCJP5LM9T64:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-03-27T16:59:40.3239230+07:00 0HLCJP5LM9T6A:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin-side/css/custom.css   (ca22a1cb)
+2018-03-27T16:59:40.3304757+07:00 0HLCJP5LM9T66:00000002 [INF] Request finished in 796.1809ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T16:59:40.3333635+07:00 0HLCJP5LM9T69:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/animate.css/animate.css   (ca22a1cb)
+2018-03-27T16:59:40.3652725+07:00 0HLCJP5LM9T62:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-03-27T16:59:40.3991232+07:00 0HLCJP5LM9T6B:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-03-27T16:59:40.4387830+07:00 0HLCJP5LM9T68:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-03-27T16:59:40.5805409+07:00 0HLCJP5LM9T65:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-03-27T16:59:40.7185468+07:00 0HLCJP5LM9T64:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-03-27T16:59:40.7247741+07:00 0HLCJP5LM9T6A:00000002 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-03-27T16:59:40.7993018+07:00 0HLCJP5LM9T69:00000002 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-03-27T16:59:40.8108376+07:00 0HLCJP5LM9T67:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-03-27T16:59:40.8307260+07:00 0HLCJP5LM9T6B:00000002 [INF] Request finished in 249.4397ms 200 text/css (791a596a)
+2018-03-27T16:59:40.8557128+07:00 0HLCJP5LM9T65:00000002 [INF] Request finished in 377.6097ms 200 application/javascript (791a596a)
+2018-03-27T16:59:40.8897575+07:00 0HLCJP5LM9T6C:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-03-27T16:59:40.9215225+07:00 0HLCJP5LM9T62:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-03-27T16:59:40.9846406+07:00 0HLCJP5LM9T68:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-03-27T16:59:41.0140436+07:00 0HLCJP5LM9T67:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-03-27T16:59:41.1169805+07:00 0HLCJP5LM9T64:00000002 [INF] Request finished in 687.8004ms 200 text/css (791a596a)
+2018-03-27T16:59:41.1328437+07:00 0HLCJP5LM9T6E:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/localization/messages_vi.js   (ca22a1cb)
+2018-03-27T16:59:41.1462652+07:00 0HLCJP5LM9T6D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-03-27T16:59:41.3997729+07:00 0HLCJP5LM9T6F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/shared/thiepvu.js   (ca22a1cb)
+2018-03-27T16:59:41.4160497+07:00 0HLCJP5LM9T6E:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/localization/messages_vi.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\localization\messages_vi.js"' (27b0a520)
+2018-03-27T16:59:41.4322074+07:00 0HLCJP5LM9T62:00000003 [INF] Request finished in 776.7513ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.4379110+07:00 0HLCJP5LM9T67:00000003 [INF] Request finished in 749.0399ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.4465964+07:00 0HLCJP5LM9T6D:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-03-27T16:59:41.4841697+07:00 0HLCJP5LM9T68:00000002 [INF] Request finished in 840.9052ms 200 text/css (791a596a)
+2018-03-27T16:59:41.5169014+07:00 0HLCJP5LM9T69:00000002 [INF] Request finished in 1083.8784ms 200 text/css (791a596a)
+2018-03-27T16:59:41.6070955+07:00 0HLCJP5LM9T6F:00000001 [INF] Sending file. Request path: '"/app/shared/thiepvu.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\shared\thiepvu.js"' (27b0a520)
+2018-03-27T16:59:41.6847107+07:00 0HLCJP5LM9T6E:00000001 [INF] Request finished in 559.1035ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.6891400+07:00 0HLCJP5LM9T6G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/controller/login/index.js   (ca22a1cb)
+2018-03-27T16:59:41.7055333+07:00 0HLCJP5LM9T6D:00000001 [INF] Request finished in 642.9594ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.7117436+07:00 0HLCJP5LM9T6C:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-03-27T16:59:41.7175731+07:00 0HLCJP5LM9T6A:00000002 [INF] Request finished in 1362.5686ms 200 text/css (791a596a)
+2018-03-27T16:59:41.7385463+07:00 0HLCJP5LM9T6G:00000001 [INF] Sending file. Request path: '"/app/controller/login/index.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\controller\login\index.js"' (27b0a520)
+2018-03-27T16:59:41.7497230+07:00 0HLCJP5LM9T6F:00000001 [INF] Request finished in 680.7701ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.7561631+07:00 0HLCJP5LM9T66:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-03-27T16:59:41.7672610+07:00 0HLCJP5LM9T66:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-03-27T16:59:41.8985733+07:00 0HLCJP5LM9T6G:00000001 [INF] Request finished in 637.3372ms 200 application/javascript (791a596a)
+2018-03-27T16:59:41.9515766+07:00 0HLCJP5LM9T66:00000003 [INF] Request finished in 215.7185ms 200 font/woff2 (791a596a)
+2018-03-27T16:59:41.9649934+07:00 0HLCJP5LM9T6C:00000002 [INF] Request finished in 1505.0236ms 200 application/javascript (791a596a)
+2018-03-27T16:59:48.1173325+07:00 0HLCJP5LM9T6B:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44300/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-03-27T16:59:48.3638937+07:00 0HLCJP5LM9T6B:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" with arguments (["CodeNetCore.Models.AccountViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:59:48.4107241+07:00 0HLCJP5LM9T6B:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T16:59:48.5641433+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("93"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-27T16:59:48.7732032+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-27T16:59:48.8334950+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T16:59:48.8609231+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-27T16:59:48.9067661+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-27T16:59:48.9146691+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T16:59:48.9313225+07:00 0HLCJP5LM9T6B:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-27T16:59:48.9361391+07:00 0HLCJP5LM9T6B:00000003 [INF] User logged in. (fdce0db4)
+2018-03-27T16:59:48.9462476+07:00 0HLCJP5LM9T6B:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-27T16:59:49.0232466+07:00 0HLCJP5LM9T6B:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" in 793.7711ms (afa2e885)
+2018-03-27T16:59:49.0736079+07:00 0HLCJP5LM9T6B:00000003 [INF] Request finished in 924.3454ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-27T16:59:49.0897269+07:00 0HLCJP5LM9T65:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/Admin/Home/Index   (ca22a1cb)
+2018-03-27T16:59:49.1007489+07:00 0HLCJP5LM9T65:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-27T16:59:49.1084706+07:00 0HLCJP5LM9T65:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T16:59:49.3816960+07:00 0HLCJP5LM9T65:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T16:59:50.1655360+07:00 0HLCJP5LM9T65:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" in 1058.2974ms (afa2e885)
+2018-03-27T16:59:50.2979267+07:00 0HLCJP5LM9T65:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Could not find an 'Invoke' or 'InvokeAsync' method for the view component 'CodeNetCore.Areas.Admin.Components.SideBarViewComponents'.
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.FindMethod(Type componentType)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.CreateDescriptor(TypeInfo typeInfo)
+   at System.Linq.Enumerable.SelectListIterator`2.ToArray()
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.GetViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.get_ViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentSelector.SelectComponent(String componentName)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.InvokeAsync(String name, Object arguments)
+   at Microsoft.AspNetCore.Mvc.Rendering.ViewComponentHelperExtensions.InvokeAsync(IViewComponentHelper helper, String name)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<<ExecuteAsync>b__39_7>d.MoveNext() in E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\Areas\Admin\Views\Shared\_Layout.cshtml:line 52
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<ExecuteAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-03-27T16:59:51.0583205+07:00 0HLCJP5LM9T65:00000003 [INF] Request finished in 1932.5423ms 500 text/html; charset=utf-8 (791a596a)
+2018-03-27T17:01:14.7129362+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T17:01:15.4394200+07:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T17:01:15.8613268+07:00  [INF] Executed DbCommand ("68"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T17:01:16.0794120+07:00  [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-03-27T17:01:16.1436495+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-03-27T17:01:16.2520576+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-03-27T17:01:16.3417752+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-03-27T17:01:16.5185911+07:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Configs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-03-27T17:01:17.2393344+07:00 0HLCJP6N7H5VP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/   (ca22a1cb)
+2018-03-27T17:01:18.1356698+07:00 0HLCJP6N7H5VP:00000001 [INF] Executing action method "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T17:01:24.4530150+07:00 0HLCJP6N7H5VP:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T17:01:25.2683191+07:00 0HLCJP6N7H5VP:00000001 [INF] Executed action "CodeNetCore.Controllers.HomeController.Index (CodeNetCore)" in 7085.6495ms (afa2e885)
+2018-03-27T17:01:25.2746493+07:00 0HLCJP6N7H5VR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/css/site.css   (ca22a1cb)
+2018-03-27T17:01:25.3028339+07:00 0HLCJP6N7H5VP:00000001 [INF] Request finished in 8227.4767ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T17:01:25.3156789+07:00 0HLCJP6N7H5VR:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\css\site.css"' (27b0a520)
+2018-03-27T17:01:25.3323420+07:00 0HLCJP6N7H5VS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-27T17:01:25.3414564+07:00 0HLCJP6N7H5VS:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-03-27T17:01:25.3575689+07:00 0HLCJP6N7H5VT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner4.svg   (ca22a1cb)
+2018-03-27T17:01:25.3906756+07:00 0HLCJP6N7H5VU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner1.svg   (ca22a1cb)
+2018-03-27T17:01:25.4247156+07:00 0HLCJP6N7H5VT:00000001 [INF] Sending file. Request path: '"/images/banner4.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner4.svg"' (27b0a520)
+2018-03-27T17:01:25.4632912+07:00 0HLCJP6N7H5VT:00000001 [INF] Request finished in 76.8926ms 200 image/svg+xml (791a596a)
+2018-03-27T17:01:25.5515716+07:00 0HLCJP6N7H5VU:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner1.svg"' (27b0a520)
+2018-03-27T17:01:25.6014409+07:00 0HLCJP6N7H5VV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner3.svg   (ca22a1cb)
+2018-03-27T17:01:25.6242470+07:00 0HLCJP6N7H5VU:00000001 [INF] Request finished in 205.5467ms 200 image/svg+xml (791a596a)
+2018-03-27T17:01:25.6395139+07:00 0HLCJP6N7H5VV:00000001 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner3.svg"' (27b0a520)
+2018-03-27T17:01:25.7680848+07:00 0HLCJP6N7H600:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/images/banner2.svg   (ca22a1cb)
+2018-03-27T17:01:25.9945948+07:00 0HLCJP6N7H600:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\images\banner2.svg"' (27b0a520)
+2018-03-27T17:01:26.0455520+07:00 0HLCJP6N7H5VV:00000001 [INF] Request finished in 100.2793ms 200 image/svg+xml (791a596a)
+2018-03-27T17:01:26.1358436+07:00 0HLCJP6N7H602:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-03-27T17:01:26.1391158+07:00 0HLCJP6N7H600:00000001 [INF] Request finished in 360.466ms 200 image/svg+xml (791a596a)
+2018-03-27T17:01:26.1706061+07:00 0HLCJP6N7H602:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-03-27T17:01:26.2014361+07:00 0HLCJP6N7H601:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-03-27T17:01:26.2169911+07:00 0HLCJP6N7H603:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-03-27T17:01:26.2222985+07:00 0HLCJP6N7H603:00000001 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\js\site.js"' (27b0a520)
+2018-03-27T17:01:26.2530176+07:00 0HLCJP6N7H601:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-03-27T17:01:26.3633225+07:00 0HLCJP6N7H603:00000001 [INF] Request finished in 54.513ms 200 application/javascript (791a596a)
+2018-03-27T17:01:26.4407539+07:00 0HLCJP6N7H5VR:00000001 [INF] Request finished in 1009.8136ms 200 text/css (791a596a)
+2018-03-27T17:01:26.4716746+07:00 0HLCJP6N7H602:00000001 [INF] Request finished in 315.7499ms 200 application/javascript (791a596a)
+2018-03-27T17:01:26.7785177+07:00 0HLCJP6N7H601:00000001 [INF] Request finished in 273.446ms 200 application/javascript (791a596a)
+2018-03-27T17:01:26.8374604+07:00 0HLCJP6N7H5VS:00000001 [INF] Request finished in 1145.8781ms 200 text/css (791a596a)
+2018-03-27T17:01:26.8576122+07:00 0HLCJP6N7H5VP:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-03-27T17:01:26.9027193+07:00 0HLCJP6N7H5VP:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-03-27T17:01:26.9841572+07:00 0HLCJP6N7H5VP:00000002 [INF] Request finished in 167.5855ms 200 font/woff2 (791a596a)
+2018-03-27T17:01:27.0201742+07:00 0HLCJP6N7H5VT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/favicon.ico   (ca22a1cb)
+2018-03-27T17:01:27.2060597+07:00 0HLCJP6N7H5VT:00000002 [INF] Request finished in 47.4649ms 404  (791a596a)
+2018-03-27T17:01:30.9902443+07:00 0HLCJP6N7H5VU:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin   (ca22a1cb)
+2018-03-27T17:01:31.0249473+07:00 0HLCJP6N7H5VU:00000002 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T17:01:31.5458827+07:00 0HLCJP6N7H5VU:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-03-27T17:01:32.3718713+07:00 0HLCJP6N7H5VU:00000002 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Index (CodeNetCore)" in 676.0976ms (afa2e885)
+2018-03-27T17:01:32.9929877+07:00 0HLCJP6N7H5VU:00000002 [INF] Request finished in 1397.6585ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-27T17:01:33.0044130+07:00 0HLCJP6N7H600:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-27T17:01:33.0269920+07:00 0HLCJP6N7H5VV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-03-27T17:01:33.0459427+07:00 0HLCJP6N7H601:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/admin-side/css/custom.css   (ca22a1cb)
+2018-03-27T17:01:33.0671086+07:00 0HLCJP6N7H603:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/animate.css/animate.css   (ca22a1cb)
+2018-03-27T17:01:33.0720780+07:00 0HLCJP6N7H5VR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-03-27T17:01:33.1161502+07:00 0HLCJP6N7H600:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-03-27T17:01:33.1227190+07:00 0HLCJP6N7H5VV:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-03-27T17:01:33.1461212+07:00 0HLCJP6N7H601:00000002 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-03-27T17:01:33.2118550+07:00 0HLCJP6N7H603:00000002 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-03-27T17:01:33.2236423+07:00 0HLCJP6N7H602:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-03-27T17:01:33.2347173+07:00 0HLCJP6N7H5VS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-03-27T17:01:33.2803044+07:00 0HLCJP6N7H5VR:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-03-27T17:01:33.3009656+07:00 0HLCJP6N7H5VP:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-03-27T17:01:33.3060127+07:00 0HLCJP6N7H5VV:00000002 [INF] Request finished in 1069.6779ms 200 text/css (791a596a)
+2018-03-27T17:01:33.3105703+07:00 0HLCJP6N7H5VT:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-03-27T17:01:33.3509420+07:00 0HLCJP6N7H604:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-03-27T17:01:33.3557256+07:00 0HLCJP6N7H602:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-03-27T17:01:33.3631518+07:00 0HLCJP6N7H5VS:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-03-27T17:01:33.4118209+07:00 0HLCJP6N7H605:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-03-27T17:01:33.5202031+07:00 0HLCJP6N7H604:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-03-27T17:01:33.5299929+07:00 0HLCJP6N7H5VT:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-03-27T17:01:33.6012769+07:00 0HLCJP6N7H5VP:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-03-27T17:01:33.7713174+07:00 0HLCJP6N7H5VR:00000002 [INF] Request finished in 1107.4465ms 200 text/css (791a596a)
+2018-03-27T17:01:33.7800891+07:00 0HLCJP6N7H606:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/jquery-validation/localization/messages_vi.js   (ca22a1cb)
+2018-03-27T17:01:33.8716608+07:00 0HLCJP6N7H605:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-03-27T17:01:34.0165102+07:00 0HLCJP6N7H602:00000002 [INF] Request finished in 1079.0444ms 200 text/css (791a596a)
+2018-03-27T17:01:34.0545590+07:00 0HLCJP6N7H5VT:00000003 [INF] Request finished in 533.3535ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.1026774+07:00 0HLCJP6N7H604:00000001 [INF] Request finished in 313.0291ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.1178953+07:00 0HLCJP6N7H606:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/localization/messages_vi.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\jquery-validation\localization\messages_vi.js"' (27b0a520)
+2018-03-27T17:01:34.1483462+07:00 0HLCJP6N7H5VS:00000002 [INF] Request finished in 715.3133ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.2188312+07:00 0HLCJP6N7H5VP:00000003 [INF] Request finished in 620.6814ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.2337204+07:00 0HLCJP6N7H605:00000001 [INF] Request finished in 677.6593ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.4225121+07:00 0HLCJP6N7H606:00000001 [INF] Request finished in 750.4819ms 200 application/javascript (791a596a)
+2018-03-27T17:01:34.4350674+07:00 0HLCJP6N7H608:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/shared/thiepvu.js   (ca22a1cb)
+2018-03-27T17:01:34.5714186+07:00 0HLCJP6N7H607:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44300/app/controller/login/index.js   (ca22a1cb)
+2018-03-27T17:01:34.6026427+07:00 0HLCJP6N7H603:00000002 [INF] Request finished in 2048.407ms 200 text/css (791a596a)
+2018-03-27T17:01:34.6164224+07:00 0HLCJP6N7H601:00000002 [INF] Request finished in 2039.6077ms 200 text/css (791a596a)
+2018-03-27T17:01:34.6902443+07:00 0HLCJP6N7H608:00000001 [INF] Sending file. Request path: '"/app/shared/thiepvu.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\shared\thiepvu.js"' (27b0a520)
+2018-03-27T17:01:34.6912833+07:00 0HLCJP6N7H600:00000002 [INF] Request finished in 2279.0497ms 200 text/css (791a596a)
+2018-03-27T17:01:34.7050349+07:00 0HLCJP6N7H5VU:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-03-27T17:01:34.7180507+07:00 0HLCJP6N7H5VU:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-03-27T17:01:34.7207728+07:00 0HLCJP6N7H607:00000001 [INF] Sending file. Request path: '"/app/controller/login/index.js"'. Physical path: '"E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\wwwroot\app\controller\login\index.js"' (27b0a520)
+2018-03-27T17:01:35.0988828+07:00 0HLCJP6N7H607:00000001 [INF] Request finished in 662.5734ms 200 application/javascript (791a596a)
+2018-03-27T17:01:35.1083529+07:00 0HLCJP6N7H608:00000001 [INF] Request finished in 589.2339ms 200 application/javascript (791a596a)
+2018-03-27T17:01:35.2314782+07:00 0HLCJP6N7H5VU:00000003 [INF] Request finished in 578.8195ms 200 font/woff2 (791a596a)
+2018-03-27T17:01:40.9894954+07:00 0HLCJP6N7H5VV:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44300/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-03-27T17:01:41.1825877+07:00 0HLCJP6N7H5VV:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" with arguments (["CodeNetCore.Models.AccountViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-27T17:01:41.2220926+07:00 0HLCJP6N7H5VV:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CodeNetCore.Data.EF " (9958f5bb)
+2018-03-27T17:01:41.3853001+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("72"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-27T17:01:42.3633122+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("607"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-27T17:01:42.4720905+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("14"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T17:01:42.5484081+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("38"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-27T17:01:42.6030891+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-27T17:01:42.6287297+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-27T17:01:42.6440496+07:00 0HLCJP6N7H5VV:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-27T17:01:42.6549864+07:00 0HLCJP6N7H5VV:00000003 [INF] User logged in. (fdce0db4)
+2018-03-27T17:01:42.6707517+07:00 0HLCJP6N7H5VV:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-27T17:01:42.7960487+07:00 0HLCJP6N7H5VV:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.LoginController.Authen (CodeNetCore)" in 1702.316ms (afa2e885)
+2018-03-27T17:01:42.8792751+07:00 0HLCJP6N7H5VR:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44300/Admin/Home/Index   (ca22a1cb)
+2018-03-27T17:01:42.9005185+07:00 0HLCJP6N7H5VV:00000003 [INF] Request finished in 1813.5729ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-27T17:01:42.9133137+07:00 0HLCJP6N7H5VR:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-27T17:01:42.9212468+07:00 0HLCJP6N7H5VR:00000003 [INF] Executing action method "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-27T17:01:43.2708055+07:00 0HLCJP6N7H5VR:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-03-27T17:01:44.3067373+07:00 0HLCJP6N7H5VR:00000003 [INF] Executed action "CodeNetCore.Areas.Admin.Controlers.HomeController.Index (CodeNetCore)" in 1381.4262ms (afa2e885)
+2018-03-27T17:01:44.6037949+07:00 0HLCJP6N7H5VR:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Could not find an 'Invoke' or 'InvokeAsync' method for the view component 'CodeNetCore.Areas.Admin.Components.SideBarViewComponents'.
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.FindMethod(Type componentType)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorProvider.CreateDescriptor(TypeInfo typeInfo)
+   at System.Linq.Enumerable.SelectListIterator`2.ToArray()
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.GetViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentDescriptorCollectionProvider.get_ViewComponents()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentSelector.SelectComponent(String componentName)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.InvokeAsync(String name, Object arguments)
+   at Microsoft.AspNetCore.Mvc.Rendering.ViewComponentHelperExtensions.InvokeAsync(IViewComponentHelper helper, String name)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<<ExecuteAsync>b__39_7>d.MoveNext() in E:\Githubs\CodeNetCore\CodeNetCore\CodeNetCore\Areas\Admin\Views\Shared\_Layout.cshtml:line 52
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Areas_Admin_Views_Shared__Layout_cshtml.<ExecuteAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-03-27T17:01:46.0568991+07:00 0HLCJP6N7H5VR:00000003 [INF] Request finished in 2485.7158ms 500 text/html; charset=utf-8 (791a596a)
