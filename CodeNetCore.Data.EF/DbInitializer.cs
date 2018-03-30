@@ -122,50 +122,51 @@ namespace CodeNetCore.Data.EF
                 _context.Sizes.AddRange(listSize);
             }
 
-            //if (_context.ProductCategories.Count() == 0)
-            //{
-            //    List<ProductCategory> listProductCategory = new List<ProductCategory>()
-            //    {
-            //        new ProductCategory() { Name="Men shirt",Alias="men-shirt",ParentId = null,Status=Status.Active,Ord=1,
-            //            Products = new List<Product>()
-            //            {
-            //                new Product(){Name = "Product 1",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-1",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 2",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-2",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 3",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-3",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 4",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-4",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 5",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-5",Price = 1000,Status = Status.Active},
-            //            }
-            //        },
-            //        new ProductCategory() { Name="Women shirt",Alias="women-shirt",ParentId = null,Status=Status.Active ,Ord=2,
-            //            Products = new List<Product>()
-            //            {
-            //                new Product(){Name = "Product 6",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-6",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 7",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-7",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 8",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-8",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 9",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-9",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 10",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-10",Price = 1000,Status = Status.Active},
-            //            }},
-            //        new ProductCategory() { Name="Men shoes",Alias="men-shoes",ParentId = null,Status=Status.Active ,Ord=3,
-            //            Products = new List<Product>()
-            //            {
-            //                new Product(){Name = "Product 11",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-11",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 12",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-12",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 13",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-13",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 14",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-14",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 15",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-15",Price = 1000,Status = Status.Active},
-            //            }},
-            //        new ProductCategory() { Name="Woment shoes",Alias="women-shoes",ParentId = null,Status=Status.Active,Ord=4,
-            //            Products = new List<Product>()
-            //            {
-            //                new Product(){Name = "Product 16",DateCreated=DateTime.Now, ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-16",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 17",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-17",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 18",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-18",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 19",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-19",Price = 1000,Status = Status.Active},
-            //                new Product(){Name = "Product 20",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-20",Price = 1000,Status = Status.Active},
-            //            }}
-            //    };
-            //    _context.ProductCategories.AddRange(listProductCategory);
-            //}
+            if (_context.ProductCategories.Count() == 0)
+            {
+                List<ProductCategory> listProductCategory = new List<ProductCategory>()
+                {
+                    new ProductCategory() { Name="Men shirt",Alias="men-shirt",ParentId = null,Status=Status.Active,Ord=1, DateCreated=DateTime.Now,DateModified=DateTime.Now,LanguageId=1, Description="Baba men",
+                        Products = new List<Product>()
+                        {
+                            new Product(){Name = "Product 1",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-1",Price = 1000,Status = Status.Active,
+                                DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 2",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-2",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 3",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-3",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 4",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-4",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 5",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-5",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                        }
+                    },
+                    new ProductCategory() { Name="Women shirt",Alias="women-shirt",ParentId = null,Status=Status.Active ,Ord=2,DateCreated=DateTime.Now,DateModified=DateTime.Now,LanguageId=1,  Description="Baba men",
+                        Products = new List<Product>()
+                        {
+                            new Product(){Name = "Product 6",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-6",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 7",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-7",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 8",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-8",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 9",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-9",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 10",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-10",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                        }},
+                    new ProductCategory() { Name="Men shoes",Alias="men-shoes",ParentId = null,Status=Status.Active ,Ord=3,DateCreated=DateTime.Now,DateModified=DateTime.Now,LanguageId=1, Description="Baba men",
+                        Products = new List<Product>()
+                        {
+                            new Product(){Name = "Product 11",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-11",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 12",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-12",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 13",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-13",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 14",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-14",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 15",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-15",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                        }},
+                    new ProductCategory() { Name="Woment shoes",Alias="women-shoes",ParentId = null,Status=Status.Active,Ord=4,DateCreated=DateTime.Now,DateModified=DateTime.Now,LanguageId=1, Description="Baba men",
+                        Products = new List<Product>()
+                        {
+                            new Product(){Name = "Product 16",DateCreated=DateTime.Now, ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-16",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 17",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-17",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 18",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-18",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 19",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-19",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                            new Product(){Name = "Product 20",DateCreated=DateTime.Now,ImageDetail="/client-side/images/products/product-1.jpg",Tag = "san-pham-20",Price = 1000,Status = Status.Active,   DateModified =DateTime.Now, PriceSale=5000,Warranty=1, CategoryId=1},
+                        }}
+                };
+                _context.ProductCategories.AddRange(listProductCategory);
+            }
 
 
             await _context.SaveChangesAsync();

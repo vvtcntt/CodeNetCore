@@ -12,6 +12,7 @@ namespace CodeNetCore.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
+            CreateMap<Product, ProductViewModel>();
             CreateMap<ProductCategory, ProductCategoryViewModel>();
             CreateMap<Function, FunctionViewModel>();
         }

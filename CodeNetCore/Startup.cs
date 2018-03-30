@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using CodeNetCore.Data;
-using CodeNetCore.Models;
-using CodeNetCore.Services;
-using CodeNetCore.Data.EF;
-using CodeNetCore.Data.Entites;
-using AutoMapper;
-using CodeNetCore.Data.iRepositories;
+﻿using AutoMapper;
 using CodeNetCore.Application.Implementation;
 using CodeNetCore.Application.Interfaces;
+using CodeNetCore.Data.EF;
 using CodeNetCore.Data.EF.Repositories;
+using CodeNetCore.Data.Entites;
+using CodeNetCore.Data.iRepositories;
+using CodeNetCore.Helpers;
+using CodeNetCore.Services;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using CodeNetCore.Helpers;
+using System;
 
 namespace CodeNetCore
 {
@@ -38,7 +33,7 @@ namespace CodeNetCore
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                o=>o.MigrationsAssembly("CodeNetCore.Data.EF")));
+                o => o.MigrationsAssembly("CodeNetCore.Data.EF")));
 
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
@@ -60,7 +55,7 @@ namespace CodeNetCore
                 options.User.RequireUniqueEmail = true;
             });
             services.AddAutoMapper();
-             //services.AddAutoMapper();
+            //services.AddAutoMapper();
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
@@ -70,16 +65,19 @@ namespace CodeNetCore
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
             //repository
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();
             //service
+            services.AddTransient<IProductService, ProductService>();
+
             services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-            services.AddMvc().AddJsonOptions(options=>options.SerializerSettings.ContractResolver=new DefaultContractResolver());
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory,DbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, DbInitializer dbInitializer)
         {
             loggerFactory.AddFile("Logs/loginthiepvu.txt");
             if (env.IsDevelopment())
@@ -106,7 +104,7 @@ namespace CodeNetCore
                 routes.MapRoute(name: "areaRoute",
                     template: "{area:exists}/{controller=login}/{action=Index}/{id?}");
             });
-             //dbInitializer.Seed().Wait();
+            //dbInitializer.Seed().Wait();
         }
     }
 }

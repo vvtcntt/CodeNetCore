@@ -1,4 +1,4 @@
-﻿var tedu = {
+﻿var thiepvu = {
     config: {
         pageSize: 10,
         pageIndex:1

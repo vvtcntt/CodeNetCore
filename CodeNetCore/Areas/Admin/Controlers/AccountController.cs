@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CodeNetCore.Areas.Admin.Controlers
 {
-    [Area("Admin")]
-    public class AccountController : Controller
+     public class AccountController :BaseController
     {
         public IActionResult Index()
         {
