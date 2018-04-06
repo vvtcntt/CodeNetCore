@@ -83,7 +83,7 @@
                         <ul class="nav navbar-nav navbar-right">
 
                             <li class="">
-                            @await Html.PartialAsync("_LoginPartial")
+                                @await Html.PartialAsync("_LoginPartial")
                             </li>
                             <li role="presentation" class="dropdown">
                                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
@@ -198,6 +198,7 @@
     <!-- DateJS -->
     <script src="~/lib/DateJS/build/date.js"></script>
     <!-- bootstrap-daterangepicker -->
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
     <script src="~/lib/moment/min/moment.min.js"></script>
     <script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="~/lib/mustache/mustache.js"></script>
@@ -207,6 +208,6 @@
     <script src="~/app/shared/thiepvu.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="~/admin-side/js/custom.js"></script>
-    @RenderSection("scripts",required:false)
+    @RenderSection("scripts", required: false)
 </body>
 </html>
