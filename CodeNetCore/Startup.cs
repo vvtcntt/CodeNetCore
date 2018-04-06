@@ -6,6 +6,7 @@ using CodeNetCore.Data.EF.Repositories;
 using CodeNetCore.Data.Entites;
 using CodeNetCore.Data.iRepositories;
 using CodeNetCore.Helpers;
+using CodeNetCore.Infrastructure.Interfaces;
 using CodeNetCore.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -69,6 +70,8 @@ namespace CodeNetCore
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();
             //service
+            services.AddTransient(typeof(IUnitOfWork),typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
             services.AddTransient<IProductService, ProductService>();
 
             services.AddTransient<IFunctionService, FunctionService>();

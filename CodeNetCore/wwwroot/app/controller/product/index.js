@@ -1,5 +1,6 @@
 ﻿var productController = function () {
     this.initialize = function () {
+        loadCategory();
         loadData();
          registerEvents();
     }
@@ -12,14 +13,44 @@
             loadData(true);
         });
     }
+    $("#txtKeyword").on('keypress', function (e) {
+        if (e.which === 13) {
+            loadData();        }
+      
+    });
+    function loadCategory() {
+        $.ajax({
+            type: 'GET',
+            data: {
+                categoryId: $("#ddlCategorySearch").val(),
+                keyword: $('#txtKeyword').val(),
+                page: thiepvu.configs.pageIndex,
+                pageSize: thiepvu.configs.pageSize
+            },
+            url: '/admin/product/GetAllCategory',
+            dataType: 'json',
+            success: function (response) {
+                console.log(response);
+                var render = "<option value='' >--Chọn danh mục--</option>";
 
+                $.each(response, function (i, item) {
+                    render += "<option value='" + item.id + "'> " + item.Name + "</option>";
+                });
+                $('#ddlCategorySearch').html(render);
+            },
+            error: function (status) {
+                console.log(status);
+                thiepvu.notify('Cannot loading data', 'error');
+            }
+        });
+    }
     function loadData(isPageChanged) {
         var template = $('#table-template').html();
         var render = "";
         $.ajax({
             type: 'GET',
             data: {
-                categoryId: null,
+                categoryId: $("#ddlCategory").val(),
                 keyword: $('#txtKeyword').val(),
                 page: thiepvu.configs.pageIndex,
                 pageSize: thiepvu.configs.pageSize
