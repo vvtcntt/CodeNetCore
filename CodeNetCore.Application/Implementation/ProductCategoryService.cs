@@ -82,12 +82,18 @@ namespace CodeNetCore.Application.Implementation
 
         public void ReOrder(int sourceId, int targetId)
         {
-            throw new NotImplementedException();
+            var source = _productCategoryRepository.FindById(sourceId);
+            var target = _productCategoryRepository.FindById(targetId);
+            int temOrd = source.Ord;
+            source.Ord = target.Ord;
+            target.Ord = temOrd;
+            _productCategoryRepository.Update(source);
+            _productCategoryRepository.Update(target);
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            _unitOfWork.Commit();
         }
 
         public void Update(ProductCategoryViewModel productCategoryVm)
@@ -97,7 +103,16 @@ namespace CodeNetCore.Application.Implementation
 
         public void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
         {
-            throw new NotImplementedException();
+            var sourceCategory = _productCategoryRepository.FindById(sourceId);
+            sourceCategory.ParentId = targetId;
+            _productCategoryRepository.Update(sourceCategory);
+            var sibling = _productCategoryRepository.FindAll(p => items.ContainsKey(p.Id));
+            foreach(var child in sibling)
+            {
+                child.Ord = items[child.Id];
+                _productCategoryRepository.Update(child);
+
+            }
         }
     }
 }

@@ -2,9 +2,10 @@
     this.initialize = function () {
         loadData();
     }
+
     function loadData() {
         $.ajax({
-            url: '/admin/productCategory/getall',
+            url: '/Admin/ProductCategory/GetAll',
             dataType: 'json',
             success: function (response) {
                 var data = [];
@@ -13,17 +14,65 @@
                         id: item.Id,
                         text: item.Name,
                         parentId: item.ParentId,
-                        ord: item.Ord
-
+                        Ord: item.Ord
                     });
-                   
+
                 });
                 var treeArr = thiepvu.unflattern(data);
-                //var $tree = $('#treeProductCategogy');
+                treeArr.sort(function (a, b) {
+                    return a.Ord - b.Ord;
+                });
+                //var $tree = $('#treeProductCategory');
+
                 $('#treeProductCategory').tree({
                     data: treeArr,
-                    dnd:true
-                })
+                    dnd: true,
+                    onDrop: function (target, source, point) {
+                        console.log(target);
+                        console.log(source);
+                        console.log(point);
+                        var targetNode = $(this).tree('getNode', target);
+                        if (point === 'append') {
+                            var children = [];
+                            $.each(targetNode.children, function (i, item) {
+                                children.push({
+                                    key: item.id,
+                                    value: i
+                                });
+                            });
+
+                            //Update to database
+                            $.ajax({
+                                url: '/Admin/ProductCategory/UpdateParentId',
+                                type: 'post',
+                                dataType: 'json',
+                                data: {
+                                    sourceId: source.id,
+                                    targetId: targetNode.id,
+                                    items: children
+                                },
+                                success: function (res) {
+                                    loadData();
+                                }
+                            });
+                        }
+                        else if (point === 'top' || point === 'bottom') {
+                            $.ajax({
+                                url: '/Admin/ProductCategory/updateOrd',
+                                type: 'post',
+                                dataType: 'json',
+                                data: {
+                                    sourceId: source.id,
+                                    targetId: targetNode.id
+                                },
+                                success: function (res) {
+                                    loadData();
+                                }
+                            });
+                        }
+                    }
+                });
+
             }
         });
     }
