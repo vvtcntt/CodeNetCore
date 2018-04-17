@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CodeNetCore.Data.EF.Migrations
 {
-    public partial class initials : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

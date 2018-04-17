@@ -1,8 +1,207 @@
-﻿var productCategoryController = function () {
+﻿var productCategoryController = function ()
+{
     this.initialize = function () {
         loadData();
+        registerEvents();
     }
+    function registerEvents() {
+       
+        $('#frmMaintainance').validate({
+            errorClass: 'red',
+            ignore: [],
+            lang: 'en',
+            rules: {
+                txtNameM: { required: true },
+                txtOrderM: { number: true }
+            }
+        });
 
+        $('#btnCreate').off('click').on('click', function () {
+            initTreeDropDownCategory();
+            $('#modal-add-edit').modal('show'); 
+
+        });
+        $('body').on('click', '#btnCreateM', function (e) {
+            e.preventDefault();
+            var that = $('#hidIdM').val();
+            resetFormMaintainance();
+
+            initTreeDropDownCategory(that);
+            $('#modal-add-edit').modal('show');
+        });
+        $('body').on('click', '#btnEdit', function (e) {
+            e.preventDefault();
+            var that = $('#hidIdM').val();
+            $.ajax({
+                type: "GET",
+                url: "/Admin/ProductCategory/GetById",
+                data: { id: that },
+                dataType: "json",
+                beforeSend: function () {
+                    thiepvu.startLoading();
+                },
+                success: function (response) {
+                    var data = response;
+                    $('#hidIdM').val(data.Id);
+                    $('#txtNameM').val(data.Name);
+                    initTreeDropDownCategory(data.ParentId);
+
+                    $('#txtDescM').val(data.Description);
+                    $('#txtContM').val(data.Content);
+                    $('#txtIconM').val(data.Icon);
+                    $('#txtImageM').val(data.Image);
+
+                    $('#txtSeoKeywordM').val(data.KeywordMeta);
+                    $('#txtSeoDescriptionM').val(data.DescriptionMeta);
+                    $('#txtSeoPageTitleM').val(data.TitleMeta);
+                    $('#txtSeoAliasM').val(data.Alias);
+
+                    $('#ckStatusM').prop('checked', data.Status == 1);
+                    $('#chkHomeflag').prop('checked', data.HomeFlag);
+                    $('#txtOrderM').val(data.Ord);
+ 
+                    $('#modal-add-edit').modal('show');
+                    thiepvu.stopLoading();
+
+                },
+                error: function (status) {
+                    thiepvu.notify('Có lỗi xảy ra', 'error');
+                    thiepvu.stopLoading();
+                }
+            });
+        });
+
+        $('body').on('click', '#btnDelete', function (e) {
+            e.preventDefault();
+            var that = $('#hidIdM').val();
+            thiepvu.confirm('Are you sure to delete?', function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/ProductCategory/Delete",
+                    data: { id: that },
+                    dataType: "json",
+                    beforeSend: function () {
+                        thiepvu.startLoading();
+                    },
+                    success: function (response) {
+                        thiepvu.notify('Deleted success', 'success');
+                        thiepvu.stopLoading();
+                        loadData();
+                    },
+                    error: function (status) {
+                        thiepvu.notify('Has an error in deleting progress', 'error');
+                        thiepvu.stopLoading();
+                    }
+                });
+            });
+        });
+
+        $('#btnSave').on('click', function (e) {
+            if ($('#frmMaintainance').valid()) {
+                e.preventDefault();
+                var id = parseInt($('#hidIdM').val());
+                var name = $('#txtNameM').val();
+                var parentId = $('#ddlCategoryIdM').combotree('getValue');
+                var description = $('#txtDescM').val();
+                var content = $('#txtContM').val();
+                var icon = $('#txtIconM').val();
+                var image = $('#txtImageM').val();
+                var order = parseInt($('#txtOrderM').val());
+
+                var seoKeyword = $('#txtSeoKeywordM').val();
+                var seoMetaDescription = $('#txtSeoDescriptionM').val();
+                var seoPageTitle = $('#txtSeoPageTitleM').val();
+                var seoAlias = $('#txtSeoAliasM').val();
+                var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
+                var homeflag = $('#chkHomeglag').prop('checked');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/ProductCategory/SaveEntity",
+                    data: {
+                        Id: id,
+                        Name: name,
+                        Description: description,
+                        Content: content,
+                        ParentId: parentId,
+                        Ord: order,
+                        HomeFlag: homeflag,
+                        Image: image,
+                        Icon:icon,
+                        Status: status,
+                        TitleMeta: seoPageTitle,
+                        Alias: seoAlias,
+                        KeywordMeta: seoKeyword,
+                        DescriptionMeta: seoMetaDescription
+                    },
+                    dataType: "json",
+                    beforeSend: function () {
+                        thiepvu.startLoading();
+                    },
+                    success: function (response) {
+                        thiepvu.notify('Update success', 'success');
+                        $('#modal-add-edit').modal('hide');
+
+                        resetFormMaintainance();
+
+                        thiepvu.stopLoading();
+                        loadData(true);
+                    },
+                    error: function () {
+                        thiepvu.notify('Has an error in update progress', 'error');
+                        thiepvu.stopLoading();
+                    }
+                });
+            }
+            return false;
+
+        });
+    }
+    function resetFormMaintainance() {
+        $('#hidIdM').val(0);
+        $('#txtNameM').val('');
+        initTreeDropDownCategory('');
+
+        $('#txtDescM').val('');
+        $('#txtOrderM').val('');
+         $('#txtImageM').val('');
+
+        $('#txtMetakeywordM').val('');
+        $('#txtMetaDescriptionM').val('');
+        $('#txtSeoPageTitleM').val('');
+        $('#txtSeoAliasM').val('');
+        $('#chkHomeflag').prop('checked', true);
+        $('#txtContM').val('');
+        $('#txtIconM').val('');
+        $('#ckStatusM').prop('checked', true);
+    }
+    function initTreeDropDownCategory(selectedId) {
+        $.ajax({
+            url: "/Admin/ProductCategory/GetAll",
+            type: 'GET',
+            dataType: 'json',
+            async: false,
+            success: function (response) {
+                var data = [];
+                $.each(response, function (i, item) {
+                    data.push({
+                        id: item.Id,
+                        text: item.Name,
+                        parentId: item.ParentId,
+                        sortOrder: item.Ord
+                    });
+                });
+             
+                var arr = thiepvu.unflattern(data);
+                $('#ddlCategoryIdM').combotree({
+                    data: arr
+                });
+                if (selectedId != undefined) {
+                    $('#ddlCategoryIdM').combotree('setValue', selectedId);
+                }
+            }
+        });
+    }
     function loadData() {
         $.ajax({
             url: '/Admin/ProductCategory/GetAll',
@@ -27,6 +226,17 @@
                 $('#treeProductCategory').tree({
                     data: treeArr,
                     dnd: true,
+                    onContextMenu: function (e, node) {
+                        e.preventDefault();
+                        // select the node
+                        //$('#tt').tree('select', node.target);
+                        $('#hidIdM').val(node.id);
+                        // display context menu
+                        $('#contextMenu').menu('show', {
+                            left: e.pageX,
+                            top: e.pageY
+                        });
+                    },
                     onDrop: function (target, source, point) {
                         console.log(target);
                         console.log(source);
@@ -53,6 +263,7 @@
                                 },
                                 success: function (res) {
                                     loadData();
+                                    thiepvu.notify('Thành công', 'oke');
                                 }
                             });
                         }
@@ -67,6 +278,8 @@
                                 },
                                 success: function (res) {
                                     loadData();
+                                    thiepvu.notify('Thành công', 'oke');
+
                                 }
                             });
                         }

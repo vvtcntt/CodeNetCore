@@ -15,7 +15,7 @@ namespace CodeNetCore.Application.ViewModels.Product
         public string Description { get; set; }
         public string Content { get; set; }
       
-        public string Images { get; set; }
+        public string Image { get; set; }
      
         public string Icon { get; set; }
         public bool? HomeFlag { get; set; }
